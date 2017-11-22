@@ -8,7 +8,8 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-env/
+.env/
+.idea/
 build/
 develop-eggs/
 dist/
@@ -24,6 +25,10 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+courses/
+usa_cities.py
+usa_cities_data.csv
+.DS_Store
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
