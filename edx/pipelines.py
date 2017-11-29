@@ -10,7 +10,7 @@ from scrapy.exporters import CsvItemExporter
 
 class HtmlFilePipeline(object):
     def process_item(self, item, spider):
-        if spider.name == "edx_spider":
+        if spider.name == "edx_spider" and 'html' in item:
             file_name = item['title']
             directory = item['folder']
             if not os.path.exists('courses/' + directory):
@@ -19,6 +19,7 @@ class HtmlFilePipeline(object):
             with open('%s/%s.html' % ('courses/' + directory, file_name), 'w') as f:
                 f.write(item['html'])
 
+            del item['html']
         return item
 
 #
