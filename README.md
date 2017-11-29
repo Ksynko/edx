@@ -1,5 +1,7 @@
 # edx
 
+Python 2.7
+
 Instalation:
 1. Clone repo: git clone https://github.com/Ksynko/edx.git
 2. create virtual env
